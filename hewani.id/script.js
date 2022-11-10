@@ -52,6 +52,10 @@ async function predict() {
   }
 }
 
-function stop(){
+function stop() {
   webcam.stop();
+  const canvas = document.getElementsByTagName("canvas")[0];
+  const labelContainer = document.getElementById("label-container");
+  canvas.remove();
+  labelContainer.innerHTML = "";
 }
