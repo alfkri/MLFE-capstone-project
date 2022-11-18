@@ -19,7 +19,7 @@ async function init() {
   maxPredictions = model.getTotalClasses();
 
   // Convenience function to setup a webcam
-  const flip = true; // whether to flip the webcam
+  const flip = false; // whether to flip the webcam
   webcam = new tmImage.Webcam(400, 400, flip); // width, height, flip
   await webcam.setup(); // request access to the webcam
   await webcam.play();
@@ -27,11 +27,6 @@ async function init() {
 
   // append elements to the DOM
   document.getElementById("webcam-container").appendChild(webcam.canvas);
-  labelContainer = document.getElementById("label-container");
-  for (let i = 0; i < maxPredictions; i++) {
-    // and class labels
-    labelContainer.appendChild(document.createElement("div"));
-  }
 }
 
 async function loop() {
@@ -44,11 +39,14 @@ async function loop() {
 async function predict() {
   // predict can take in an image, video or canvas html element
   const prediction = await model.predict(webcam.canvas);
+  const labelContainer = document.getElementById("label-container");
   for (let i = 0; i < maxPredictions; i++) {
-    const classPrediction =
-      prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-    labelContainer.childNodes[i].innerHTML = classPrediction;
-    console.log(classPrediction);
+    labelContainer.appendChild(document.createElement("div"));
+    if (prediction[i].probability.toFixed(2) > 0.7) {
+      const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+      labelContainer.childNodes[i].innerHTML = classPrediction;
+    }
+    // console.log(classPrediction);
   }
 }
 
