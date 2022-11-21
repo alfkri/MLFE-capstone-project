@@ -45,6 +45,9 @@ async function predict() {
     if (prediction[i].probability.toFixed(2) > 0.7) {
       const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
       labelContainer.childNodes[i].innerHTML = classPrediction;
+    }else{
+      const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+      labelContainer.childNodes[i].innerHTML = '';
     }
     // console.log(classPrediction);
   }
