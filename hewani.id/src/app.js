@@ -15,9 +15,13 @@ if (window.navigator.userAgent.indexOf("iPhone") > -1 || window.navigator.userAg
 
 // Load the image model and setup the webcam
 async function init() {
+  const btnStart = document.getElementById("btn-start");
+  const btnStop = document.getElementById("btn-stop");
+  const loader = document.querySelector(".loader");
   const modelURL = URL + "model.json";
   const metadataURL = URL + "metadata.json";
-
+  btnStart.classList.add("d-none");
+  btnStop.classList.remove("d-none");
   // load the model and metadata
   // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
   // or files from your local hard drive
@@ -28,7 +32,7 @@ async function init() {
 
   // Convenience function to setup a webcam
   const flip = true; // whether to flip the webcam
-  webcam = new tmImage.Webcam(600,400,flip); // width, height, flip
+  webcam = new tmImage.Webcam(600, 400, flip); // width, height, flip
   await webcam.setup({ facingMode: "environment" }); // request access to the webcam
 
   if (isIos) {
@@ -50,7 +54,7 @@ async function init() {
     // and class labels
     labelContainer.appendChild(document.createElement("p"));
   }
-  
+
   webcam.play();
   window.requestAnimationFrame(loop);
 }
@@ -65,9 +69,9 @@ async function loop() {
 async function predict() {
   let prediction;
   if (isIos) {
-      prediction = await model.predict(webcam.webcam);
+    prediction = await model.predict(webcam.webcam);
   } else {
-      prediction = await model.predict(webcam.canvas);
+    prediction = await model.predict(webcam.canvas);
   }
   // predict can take in an image, video or canvas html element
   // const prediction = await model.predict(webcam.canvas);
@@ -91,9 +95,13 @@ async function predict() {
 
 function stop() {
   webcam.stop();
+  const btnStart = document.getElementById("btn-start");
+  const btnStop = document.getElementById("btn-stop");
+  btnStart.classList.remove("d-none");
+  btnStop.classList.add("d-none");
   const canvas = document.getElementsByTagName("canvas")[0];
   const labelContainer = document.getElementById("label-container");
-  labelContainer.innerHTML= "";
+  labelContainer.innerHTML = "";
   canvas.remove();
 }
 
