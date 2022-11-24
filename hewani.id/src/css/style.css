@@ -1,5 +1,73 @@
-.hidden {
-  display: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: rgb(1,102,248);
+    background: linear-gradient(90deg, rgba(1,102,248,1) 0%, rgba(1,42,137,1) 100%);
+}
+
+.main-content {
+    padding-top: 100px;
+}
+
+.bg-putih {
+    position: absolute;
+    left: -80px;
+    z-index: -10;
+}
+
+.domain {
+    color: #FF6B00;
+}
+
+.about {
+    margin-top: 100px !important;
+    color: #0166F8;
+}
+
+.tombol-mulai {
+    text-decoration: none;
+}
+
+.btn-start {
+    font-size: 24px !important;
+}
+
+.about h1 {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.about p {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.deskripsi {
+    margin-top: 450px !important;
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+}
+
+#webcam-container {
+    width: 610px;
+    height: 410px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 5px solid #0166F8;
+    background-color: #393939;
+}
+
+canvas {
+  border-radius: 5px;
 }
 
 .label-hewan{
@@ -7,16 +75,64 @@
   font-size: 40px;
 }
 
-body{
-  background-image: linear-gradient(#0166F8,#0166F8);
+.tombol {
+    font-size: 20px !important;
+}
+
+footer {
+    background-color: #012A89;
+    color: white;
+    padding: 25px;
+    margin-top: 80px;
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 990px) {
+    a .nav-link {
+        color: black !important;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+    }
+
+    .about {
+        color: white;
+    }
+
+    canvas {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 425px) {
   .label-hewan{
     font-size: 20px;
   }
+
   canvas{
     width: 250px;
     height: 200px;
   }
+
+  .about h1 {
+    font-size: 40px;
+  }
+  
+  .about p {
+        font-size: 20px;
+    }
+
+    .deskripsi {
+        font-size: 18px;
+    }
+
+  #webcam-container {
+    width: 260px;
+    height: 210px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 5px solid #0166F8;
+    background-color: #393939;
+    }
 }
