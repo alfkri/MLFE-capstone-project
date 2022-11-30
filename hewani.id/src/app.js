@@ -2,8 +2,8 @@
 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
 // the link to your model provided by Teachable Machine export panel
-const URL = "https://teachablemachine.withgoogle.com/models/-7vOVFy-s/";
-// const URL = "../my_model/";
+//const URL = "https://teachablemachine.withgoogle.com/models/-7vOVFy-s/";
+ const URL = "/my_model/";
 
 let model, webcam, labelContainer, maxPredictions;
 

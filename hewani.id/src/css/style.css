@@ -9,6 +9,10 @@ body {
     background: linear-gradient(90deg, rgba(1,102,248,1) 0%, rgba(1,42,137,1) 100%);
 }
 
+.navigasi{
+    font-size: 25px;
+}
+
 .main-content {
     padding-top: 100px;
 }
