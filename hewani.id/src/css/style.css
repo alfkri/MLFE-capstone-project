@@ -114,6 +114,14 @@ footer {
     font-size: 20px;
   }
 
+  .deskripsi {
+    margin-top: 50px !important;
+  }
+
+  .bg-putih {
+    display: none;
+  }
+
   canvas{
     width: 250px;
     height: 200px;
@@ -127,7 +135,7 @@ footer {
         font-size: 20px;
     }
 
-    .deskripsi {
+  .deskripsi {
         font-size: 18px;
     }
 
