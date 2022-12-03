@@ -3,7 +3,7 @@
 
 // the link to your model provided by Teachable Machine export panel
 //const URL = "https://teachablemachine.withgoogle.com/models/-7vOVFy-s/";
- const URL = "/my_model/";
+const URL = "/my_model/";
 
 let model, webcam, labelContainer, maxPredictions;
 
@@ -105,19 +105,12 @@ function stop() {
   canvas.remove();
 }
 
-// function readURL(input) {
-//   if (input.files && input.files[0]) {
-//     var reader = new FileReader();
-
-//     reader.onload = function (e) {
-//       $("#blah").attr("src", e.target.result).width(150);
-//     };
-
-//     reader.readAsDataURL(input.files[0]);
-//   }
-// }
-
-// function hapusFoto() {
-//   const fotoContainer = document.getElementById("blah");
-//   fotoContainer.parentNode.removeChild(fotoContainer);
-// }
+const navLink = document.querySelectorAll(".nav-link");
+navLink.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLink.forEach((link) => {
+      link.classList.remove("active-link");
+    });
+    this.classList.add("active-link");
+  });
+});

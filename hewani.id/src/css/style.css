@@ -19,7 +19,7 @@ body {
 
 .bg-putih {
     position: absolute;
-    left: -80px;
+    left: -90px;
     z-index: -10;
 }
 
@@ -52,6 +52,11 @@ body {
 
 .nav-link {
     color: white !important;
+}
+
+.active-link {
+    color: #FF6B00 !important;
+    font-weight: bold !important;
 }
 
 .deskripsi {
@@ -92,9 +97,6 @@ footer {
 }
 
 @media screen and (max-width: 990px) {
-    a .nav-link {
-        color: black !important;
-    }
 
     .hero-content {
         flex-direction: column-reverse;
@@ -116,6 +118,14 @@ footer {
 
   .deskripsi {
     margin-top: 50px !important;
+  }
+
+  .navbar {
+    background-color: white !important;
+  }
+
+  .nav-link {
+    color: black !important;
   }
 
   .bg-putih {
