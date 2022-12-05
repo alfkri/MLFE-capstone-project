@@ -1,5 +1,5 @@
 // Welcome alert
-function showAlert(){
+function showAlert() {
   Swal.fire({
     title: 'Selamat Datang di Hewani.id 😄',
     imageUrl: './asset/img-alert.gif',
@@ -35,7 +35,7 @@ async function init() {
   webcam = new tmImage.Webcam(600, 400, flip); // width, height, flip
   await webcam.setup({ facingMode: "environment" }); // request access to the webcam
 
-  
+
   // Append elements to the DOM and class labels
   document.getElementById("webcam-container").appendChild(webcam.canvas);
   labelContainer = document.getElementById("label-container");
@@ -50,7 +50,7 @@ async function init() {
 
 // Looping for update the webcam frame
 async function loop() {
-  webcam.update(); 
+  webcam.update();
   await predict();
   window.requestAnimationFrame(loop);
 }
@@ -100,4 +100,3 @@ navLink.forEach((link) => {
     this.classList.add("active-link");
   });
 });
-

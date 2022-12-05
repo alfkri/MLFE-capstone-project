@@ -5,11 +5,11 @@
 }
 
 body {
-    background: rgb(1,102,248);
-    background: linear-gradient(90deg, rgba(1,102,248,1) 0%, rgba(1,42,137,1) 100%);
+    background: rgb(1, 102, 248);
+    background: linear-gradient(90deg, rgba(1, 102, 248, 1) 0%, rgba(1, 42, 137, 1) 100%);
 }
 
-.navigasi{
+.navigasi {
     font-size: 25px;
 }
 
@@ -19,10 +19,9 @@ body {
 
 .bg-putih {
     position: absolute;
-    left: -50px;
+    left: -90px;
     z-index: -10;
 }
-
 
 .domain {
     color: #FF6B00;
@@ -47,7 +46,7 @@ body {
 }
 
 .about p {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 500;
 }
 
@@ -61,11 +60,10 @@ body {
 }
 
 .deskripsi {
-    margin-top: 300px !important;
+    margin-top: 450px !important;
     font-size: 30px;
     font-weight: 400;
     color: white;
-    padding-top: 60px;
 }
 
 #webcam-container {
@@ -78,12 +76,12 @@ body {
 }
 
 canvas {
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
-.label-hewan{
-  color:white;
-  font-size: 40px;
+.label-hewan {
+    color: white;
+    font-size: 40px;
 }
 
 .tombol {
@@ -100,87 +98,89 @@ footer {
 
 @media screen and (max-width: 990px) {
 
-    .hero-content {
+    /* .hero-content {
         flex-direction: column-reverse;
-    }
-
-    .nav-link {
-        color: rgb(0, 0, 0) !important;
-    }
-
-    .active-link {
-        color: #FF6B00 !important;
-        font-weight: bold !important;
-    }
-
-    .deskripsi {
-        margin-top: 50px !important;
-      }
+    } */
 
     .about {
         color: white;
-        margin-top: 30px !important;
     }
 
     canvas {
         width: 100%;
     }
+
+    .bg-putih {
+        display: none;
+    }
+
+    .deskripsi {
+        margin-top: 80px !important;
+    }
+
+    .navbar {
+        background-color: white !important;
+    }
+
+    .nav-link {
+        color: black !important;
+    }
+
+    .img {
+        margin: auto;
+        min-width: 100%;
+        margin-top: -48px !important;
+    }
 }
 
 @media screen and (max-width: 425px) {
-  .label-hewan{
-    font-size: 20px;
-  }
-
-  .deskripsi {
-    margin-top: 50px !important;
-  }
-
-  .navbar {
-    background-color: white !important;
-  }
-
-  .nav-link {
-    color: black !important;
-  }
-
-  .active-link {
-    color: #FF6B00 !important;
-    font-weight: bold !important;
-  }
-
-  img.bg-putih {
-    display: none;
-  }
-
-  canvas{
-    width: 250px;
-    height: 200px;
-  }
-
-  .about{
-    margin-top: 10px !important;
-    text-align: center;
-  }
-
-  .about h1 {
-    font-size: 40px;
-  }
-  
-  .about p {
+    .label-hewan {
         font-size: 20px;
     }
 
-  .deskripsi {
+    .about {
+        margin-top: 20px !important;
+    }
+
+    .deskripsi {
+        margin-top: 50px !important;
+    }
+
+    .navbar {
+        background-color: white !important;
+    }
+
+    .nav-link {
+        color: black !important;
+    }
+
+    .bg-putih {
+        display: none;
+    }
+
+    canvas {
+        width: 250px;
+        height: 200px;
+    }
+
+    .about h1 {
+        font-size: 40px;
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+
+    .deskripsi {
         font-size: 18px;
     }
 
-  #webcam-container {
-    width: 260px;
-    height: 210px;
-    margin: 0 auto;
-    border-radius: 5px;
-    border: 5px solid #0166F8;
-    background-color: #393939;
+    #webcam-container {
+        width: 260px;
+        height: 210px;
+        margin: 0 auto;
+        border-radius: 5px;
+        border: 5px solid #0166F8;
+        background-color: #393939;
     }
 }
