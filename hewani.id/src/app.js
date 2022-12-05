@@ -13,9 +13,14 @@ function showAlert() {
 let model, webcam, labelContainer, maxPredictions;
 
 // Model URL
-// const URL = "my_model/";
-const URL = "https://teachablemachine.withgoogle.com/models/-7vOVFy-s/";
+const URL = "my_model/";
+// const URL = "https://teachablemachine.withgoogle.com/models/-7vOVFy-s/";
 
+// Setting ios
+let isIos = false;
+if (window.navigator.userAgent.indexOf("iPhone") > -1 || window.navigator.userAgent.indexOf("iPad") > -1) {
+  isIos = true;
+}
 
 // Load the image model and setup the webcam
 async function init() {
@@ -34,6 +39,19 @@ async function init() {
   const flip = false; // whether to flip the webcam
   webcam = new tmImage.Webcam(600, 400, flip); // width, height, flip
   await webcam.setup({ facingMode: "environment" }); // request access to the webcam
+
+  // ios config
+  if (isIos) {
+    document.getElementById("webcam-container").appendChild(webcam.webcam); // webcam object needs to be added in any case to make this work on iOS
+    // grab video-object in any way you want and set the attributes
+    const webCamVideo = document.getElementsByTagName("video")[0];
+    webCamVideo.setAttribute("playsinline", true); // written with "setAttribute" bc. iOS buggs otherwise
+    webCamVideo.muted = "true";
+    webCamVideo.style.width = width + "px";
+    webCamVideo.style.height = height + "px";
+  } else {
+    document.getElementById("webcam-container").appendChild(webcam.canvas);
+  }
 
 
   // Append elements to the DOM and class labels
@@ -58,7 +76,11 @@ async function loop() {
 // Make a prediction and append to the DOM
 async function predict() {
   let prediction;
-  prediction = await model.predict(webcam.canvas);
+  if (isIos) {
+    prediction = await model.predict(webcam.webcam);
+  } else {
+    prediction = await model.predict(webcam.canvas);
+  }
   const labelContainer = document.getElementById("label-container");
   for (let i = 0; i < maxPredictions; i++) {
     if (prediction[i].probability.toFixed(2) > 0.7) {
