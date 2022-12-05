@@ -19,9 +19,10 @@ body {
 
 .bg-putih {
     position: absolute;
-    left: -90px;
+    left: -50px;
     z-index: -10;
 }
+
 
 .domain {
     color: #FF6B00;
@@ -46,7 +47,7 @@ body {
 }
 
 .about p {
-    font-size: 25px;
+    font-size: 32px;
     font-weight: 500;
 }
 
@@ -60,10 +61,11 @@ body {
 }
 
 .deskripsi {
-    margin-top: 450px !important;
+    margin-top: 300px !important;
     font-size: 30px;
     font-weight: 400;
     color: white;
+    padding-top: 60px;
 }
 
 #webcam-container {
@@ -102,8 +104,22 @@ footer {
         flex-direction: column-reverse;
     }
 
+    .nav-link {
+        color: rgb(0, 0, 0) !important;
+    }
+
+    .active-link {
+        color: #FF6B00 !important;
+        font-weight: bold !important;
+    }
+
+    .deskripsi {
+        margin-top: 50px !important;
+      }
+
     .about {
         color: white;
+        margin-top: 30px !important;
     }
 
     canvas {
@@ -128,13 +144,23 @@ footer {
     color: black !important;
   }
 
-  .bg-putih {
+  .active-link {
+    color: #FF6B00 !important;
+    font-weight: bold !important;
+  }
+
+  img.bg-putih {
     display: none;
   }
 
   canvas{
     width: 250px;
     height: 200px;
+  }
+
+  .about{
+    margin-top: 10px !important;
+    text-align: center;
   }
 
   .about h1 {
