@@ -8,6 +8,8 @@ function showAlert() {
     imageAlt: 'bg',
   })
 }
+showAlert();
+
 
 // Define variable
 let model, webcam, labelContainer, maxPredictions;
@@ -122,3 +124,7 @@ navLink.forEach((link) => {
     this.classList.add("active-link");
   });
 });
+
+// Event listener for start and stop button
+document.getElementById("btn-start").addEventListener("click", init);
+document.getElementById("btn-stop").addEventListener("click", stop);
