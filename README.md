@@ -13,7 +13,7 @@ Hewani.id merupakan aplikasi berbasis website yang memungkinkan anak-anak mengen
 
 ![demo](https://user-images.githubusercontent.com/72861300/205963598-d58ff175-d51f-4764-88ed-780001438c13.png)  
 
-<br><br>  
+<br>  
 
 ## Dependencies
 | Tools & Libraries yang digunakan |
