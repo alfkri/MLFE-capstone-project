@@ -89,11 +89,11 @@ async function predict() {
       const persen = prediction[i].probability.toFixed(2) * 100;
       const classPrediction = `${prediction[i].className} :  ${persen}%`;
       labelContainer.childNodes[i].innerHTML = classPrediction;
-      labelContainer.childNodes[i].classList.remove("hidden");
+      labelContainer.childNodes[i].classList.remove("d-none");
       labelContainer.childNodes[i].classList.add("text-center");
       labelContainer.childNodes[i].classList.add("label-hewan");
     } else {
-      labelContainer.childNodes[i].classList.add("hidden");
+      labelContainer.childNodes[i].classList.add("d-none");
       labelContainer.childNodes[i].classList.remove("text-center");
       labelContainer.childNodes[i].classList.remove("label-hewan");
       labelContainer.childNodes[i].innerHTML = "";
