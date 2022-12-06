@@ -38,9 +38,9 @@ async function init() {
   maxPredictions = model.getTotalClasses();
 
   // Setup a webcam
-  const flip = false; // whether to flip the webcam
+  const flip = true; // whether to flip the webcam
   webcam = new tmImage.Webcam(600, 400, flip); // width, height, flip
-  await webcam.setup({ facingMode: "user" }); // request access to the webcam
+  await webcam.setup({ facingMode: "environment" }); // request access to the webcam
 
   // ios config
   if (isIos) {
