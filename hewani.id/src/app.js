@@ -86,8 +86,7 @@ async function predict() {
   const labelContainer = document.getElementById("label-container");
   for (let i = 0; i < maxPredictions; i++) {
     if (prediction[i].probability.toFixed(2) > 0.7) {
-      const persen = prediction[i].probability.toFixed(2) * 100;
-      const classPrediction = `${prediction[i].className} :  ${persen}%`;
+      const classPrediction = `${prediction[i].className}`;
       labelContainer.childNodes[i].innerHTML = classPrediction;
       labelContainer.childNodes[i].classList.remove("d-none");
       labelContainer.childNodes[i].classList.add("text-center");
