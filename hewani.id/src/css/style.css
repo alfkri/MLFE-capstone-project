@@ -1,187 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
 
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: rgb(1, 102, 248);
-    background: linear-gradient(90deg, rgba(1, 102, 248, 1) 0%, rgba(1, 42, 137, 1) 100%);
+  background: rgb(1, 102, 248);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 102, 248, 1) 0%,
+    rgba(1, 42, 137, 1) 100%
+  );
 }
 
 .navigasi {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .main-content {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 .bg-putih {
-    position: absolute;
-    left: -90px;
-    z-index: -10;
+  position: absolute;
+  left: -50px;
+  z-index: -10;
 }
 
 .domain {
-    color: #FF6B00;
+  color: #ff6b00;
 }
 
 .about {
-    margin-top: 100px !important;
-    color: #0166F8;
+  margin-top: 100px !important;
+  color: #0166f8;
 }
 
 .tombol-mulai {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .btn-start {
-    font-size: 24px !important;
+  font-size: 24px !important;
 }
 
 .about h1 {
-    font-size: 80px;
-    font-weight: 700;
+  font-size: 80px;
+  font-weight: 700;
 }
 
 .about p {
-    font-size: 25px;
-    font-weight: 500;
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .nav-link {
-    color: white !important;
+  color: white !important;
 }
 
 .active-link {
-    color: #FF6B00 !important;
-    font-weight: bold !important;
+  color: #ff6b00 !important;
+  font-weight: bold !important;
 }
 
 .deskripsi {
-    margin-top: 450px !important;
-    font-size: 30px;
-    font-weight: 400;
-    color: white;
+  margin-top: 300px !important;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+  padding-top: 60px;
 }
 
 #webcam-container {
-    width: 610px;
-    height: 410px;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: 5px solid #0166F8;
-    background-color: #393939;
+  width: 610px;
+  height: 410px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 5px solid #0166f8;
+  background-color: #393939;
 }
 
 canvas {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 .label-hewan {
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
+  color: white;
+  font-size: 40px;
 }
 
 .tombol {
-    font-size: 20px !important;
+  font-size: 20px !important;
 }
 
 footer {
-    background-color: #012A89;
-    color: white;
-    padding: 25px;
-    margin-top: 80px;
-    font-size: 1.4em;
+  background-color: #012a89;
+  color: white;
+  padding: 25px;
+  margin-top: 80px;
+  font-size: 1.4em;
 }
 
 @media screen and (max-width: 990px) {
-    .about {
-        color: white;
-    }
+  .about {
+    color: white;
+  }
 
-    canvas {
-        width: 100%;
-    }
+  canvas {
+    width: 100%;
+  }
 
-    .bg-putih {
-        display: none;
-    }
+  .bg-putih {
+    display: none;
+  }
 
-    .deskripsi {
-        margin-top: 80px !important;
-    }
+  .deskripsi {
+    margin-top: 80px !important;
+  }
 
-    .navbar {
-        background-color: white !important;
-    }
+  .navbar {
+    background-color: white !important;
+  }
 
-    .nav-link {
-        color: black !important;
-    }
+  .nav-link {
+    color: black !important;
+  }
 
-    .img {
-        margin: auto;
-        min-width: 100%;
-        margin-top: -48px !important;
-    }
+  .active-link {
+    color: #ff6b00 !important;
+    font-weight: bold !important;
+  }
+
+  .img {
+    margin: auto;
+    min-width: 100%;
+    margin-top: -48px !important;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .label-hewan {
-        font-size: 20px;
-        font-weight: bold;
-    }
+  .label-hewan {
+    font-size: 20px;
+    font-weight: bold;
+  }
 
-    .img {
-        margin-top: 50px !important;
-    }
+  .img {
+    margin-top: 50px !important;
+  }
 
-    .about {
-        margin-top: 20px !important;
-    }
+  .about {
+    margin-top: 20px !important;
+  }
 
-    .deskripsi {
-        margin-top: 50px !important;
-    }
+  .deskripsi {
+    margin-top: 50px !important;
+  }
 
-    .navbar {
-        background-color: white !important;
-    }
+  .navbar {
+    background-color: white !important;
+  }
 
-    .nav-link {
-        color: black !important;
-    }
+  .nav-link {
+    color: black !important;
+  }
 
-    .bg-putih {
-        display: none;
-    }
+  .active-link {
+    color: #ff6b00 !important;
+    font-weight: bold !important;
+  }
 
-    canvas {
-        width: 250px;
-        height: 200px;
-    }
+  .bg-putih {
+    display: none;
+  }
 
-    .about h1 {
-        font-size: 40px;
-    }
+  canvas {
+    width: 250px;
+    height: 200px;
+  }
 
-    .about p {
-        font-size: 20px;
-    }
+  .about {
+    margin-top: 10px !important;
+    text-align: center;
+  }
 
-    .deskripsi {
-        font-size: 18px;
-    }
+  .about h1 {
+    font-size: 40px;
+  }
 
-    #webcam-container {
-        width: 260px;
-        height: 210px;
-        margin: 0 auto;
-        border-radius: 5px;
-        border: 5px solid #0166F8;
-        background-color: #393939;
-    }
+  .about p {
+    font-size: 20px;
+  }
+
+  .deskripsi {
+    font-size: 18px;
+  }
+
+  #webcam-container {
+    width: 260px;
+    height: 210px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 5px solid #0166f8;
+    background-color: #393939;
+  }
 }
