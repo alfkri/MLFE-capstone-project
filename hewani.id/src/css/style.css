@@ -87,6 +87,7 @@ canvas {
 .label-hewan {
   color: white;
   font-size: 40px;
+  font-weight: bold;
 }
 
 .tombol {
@@ -141,7 +142,6 @@ footer {
 @media screen and (max-width: 425px) {
   .label-hewan {
     font-size: 20px;
-    font-weight: bold;
   }
 
   .img {
