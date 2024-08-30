@@ -6,7 +6,7 @@
 Hewani.id merupakan aplikasi berbasis website yang memungkinkan anak-anak mengenali hewan dengan mudah dan menyenangkan. Latar belakang dirancangnya aplikasi ini yaitu karena melihat perkembangan teknologi yang semakin pesat dan akses gawai yang semakin mudah didapat oleh anak-anak sekalipun. Harapannya aplikasi ini dapat membantu anak-anak untuk belajar mengenali nama hewan dengan baik dan mudah, tidak perlu lagi menggunakan poster yang ditempel di dinding rumah.  
 
 ## Cara Pakai  
-- Buka website https://hewani.alifbatastore.com/ 
+- Buka website https://hewaniid-alfkris-projects.vercel.app
 - Kemudian klik mulai
 - Lalu start dan izinkan akses kamera di gawai anda
 - Selamat bersenang-senang!  
